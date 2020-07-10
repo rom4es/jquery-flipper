@@ -1,0 +1,105 @@
+html, body{
+
+}
+
+body{
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	color: #1e383c;
+	padding: 50px 0;
+}
+.b-block{
+	position: relative;
+    max-width: 1280px;
+    padding: 0 30px;
+    margin: 0px auto;
+}
+
+	.b-preview{
+		text-align: center;
+		max-width: 700px;
+		margin: 0 auto 50px auto;
+	}
+		h1{
+			font-size: 60px;
+	    	line-height: 60px;
+			text-align: center;
+			margin-bottom: 30px;
+			color: #47646f;
+		}
+		h2{
+			font-size: 24px;
+			text-align: left;
+			margin-bottom: 16px;
+			color: #1e383c;
+		}
+		h3{
+			font-size: 18px;
+			text-align: left;
+			margin-bottom: 8px;
+			color: #1e383c;
+		}
+		p{
+			margin-bottom: 16px;
+		}
+		.btn{
+			display: inline-block;
+			padding: 8px 16px;
+			color: #47646f;
+			border: 2px solid #47646f;
+			text-decoration: none;
+			margin-bottom: 24px;
+			-webkit-transition: background-color 100ms ease-out, color 100ms ease-out;
+		    -moz-transition: background-color 100ms ease-out, color 100ms ease-out;
+		    -ms-transition: background-color 100ms ease-out, color 100ms ease-out;
+		    -o-transition: background-color 100ms ease-out, color 100ms ease-out;
+		    transition: background-color 100ms ease-out, color 100ms ease-out;
+		}
+		.btn:hover{
+			color: #FFF;
+			background-color: #47646f;
+		}
+		.b-code{
+			text-align: left;
+			padding: 20px 30px;
+			background-color: #f6f8fa;
+			margin-bottom: 24px;
+			border: 1px solid #ddd;
+		}
+			.b-code code{
+				white-space: pre-wrap;
+				font-family: monospace, 'monaco', sans-serif;
+			}
+				.b-code code span{
+					color: #888;
+				}
+		table{
+			width: 100%;
+			border-top: 1px solid #ddd;
+			border-left: 1px solid #ddd;
+		}
+			tr{
+				border-bottom: 1px solid #ddd;
+			}
+				th{
+					background-color: #f6f8fa;
+					text-align: left;
+					padding: 8px 12px;
+					border-right: 1px solid #ddd;
+					white-space: nowrap;
+				}
+				td{
+					text-align: left;
+					padding: 8px 12px;
+					border-right: 1px solid #ddd;
+				}
+		.b-card-item{
+			height: 200px;
+			margin: 10px;
+		}
+			.b-card-item .b-img{
+				background-position: 50% 50%;
+			    background-repeat: no-repeat;
+			    background-size: cover;
+			}

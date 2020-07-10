@@ -1,0 +1,84 @@
+
+.flipper-plugin{
+
+}
+	.flipper-plugin .flip-card{
+		float: left;
+	}
+	/*=====3d анимация=====*/
+	.flipper-plugin .flip-card.animFlip {
+		-webkit-perspective: 1000px;
+		perspective: 1000px;
+	}
+		.flipper-plugin .flip-card.animFlip .flip-card-inner {
+		  position: relative;
+		  text-align: center;
+		  -webkit-transition: transform 0.8s;
+		   -moz-transition: transform 0.8s;
+		    -ms-transition: transform 0.8s;
+		   	 -o-transition: transform 0.8s;
+				transition: transform 0.8s;
+		  -webkit-transform-style: preserve-3d;
+		  transform-style: preserve-3d;
+		  min-height: 1px;
+		}
+		.flipper-plugin .flip-card.animFlip.flipped .flip-card-inner {
+		  -webkit-transform: rotateY(180deg);
+		   -moz-transform: rotateY(180deg);
+		    -ms-transform: rotateY(180deg);
+		   	 -o-transform: rotateY(180deg);
+				transform: rotateY(180deg);
+		}
+			.flipper-plugin .flip-card.animFlip .flip-card-front,
+			.flipper-plugin .flip-card.animFlip .flip-card-back {
+			  position: absolute;
+			  width: 100%;
+			  height: 100%;
+			  -webkit-backface-visibility: hidden;
+			  backface-visibility: hidden;
+			}
+			.flipper-plugin .flip-card.animFlip .flip-card-front {
+
+			}
+			.flipper-plugin .flip-card.animFlip .flip-card-back {
+			  -webkit-transform: rotateY(180deg);
+			   -moz-transform: rotateY(180deg);
+			    -ms-transform: rotateY(180deg);
+			   	 -o-transform: rotateY(180deg);
+					transform: rotateY(180deg);
+			}
+	/*=====FadeIn анимация=====*/
+	.flipper-plugin .flip-card.animFadeIn {
+		
+	}
+		.flipper-plugin .flip-card.animFadeIn .flip-card-inner {
+		  position: relative;
+		  text-align: center;
+		}
+		.flipper-plugin .flip-card.animFadeIn.flipped .flip-card-inner {
+
+		}
+			.flipper-plugin .flip-card.animFadeIn .flip-card-front,
+			.flipper-plugin .flip-card.animFadeIn .flip-card-back{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				-webkit-transition: opacity 0.8s;
+				   -moz-transition: opacity 0.8s;
+				    -ms-transition: opacity 0.8s;
+				   	 -o-transition: opacity 0.8s;
+						transition: opacity 0.8s;
+
+			}
+			.flipper-plugin .flip-card.animFadeIn.flipped .flip-card-front{
+				opacity: 0;
+			}
+			.flipper-plugin .flip-card.animFadeIn.flipped .flip-card-back {
+				opacity: 1;
+			}
+			.flipper-plugin .flip-card.animFadeIn .flip-card-front{
+				opacity: 1;
+			}
+			.flipper-plugin .flip-card.animFadeIn .flip-card-back {
+				opacity: 0;
+			}

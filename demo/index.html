@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery.flipper</title>
+	<meta name="keywords" content=''>
+	<meta name="description" content=''>
+	<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+
+	<meta name="format-detection" content="telephone=no">
+
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="css/reset.css" type="text/css">
+	<link rel="stylesheet" href="css/jquery.flipper.css" type="text/css">
+	<link rel="stylesheet" href="css/layout.css" type="text/css">
+</head>
+<body>
+
+	<div class="b-block">
+		<div class="b-preview">
+			<h1>jquery.flipper</h1>
+			<p>Небольшой jquery плагин, который умеет переворачивать карточки</p>
+			<a href="#" class="btn">Wiew on Github</a><br>
+			<h2>Опции</h2>
+			<table cellspacing="0" cellpadding="0">
+				<tr>
+					<th>Имя</th>
+					<th>Тип</th>
+					<th>По умолчанию</th>
+					<th>Описание</th>
+				</tr>
+				<tr>
+					<td>countCardsInRow</td>
+					<td>Number</td>
+					<td>3</td>
+					<td>Количество карточек в строке</td>
+				</tr>
+				<tr>
+					<td>delayFlip</td>
+					<td>Number</td>
+					<td>2000</td>
+					<td>Время между сменой следующей карточки (мс)</td>
+				</tr>
+				<tr>
+					<td>animateSpeed</td>
+					<td>Number</td>
+					<td>1000</td>
+					<td>Скорость анимации смены карточки (мс)</td>
+				</tr>
+				<tr>
+					<td>animateType</td>
+					<td>String</td>
+					<td>"animFlip"</td>
+					<td>Тип анимации.<br>"animFlip" - переворачивание, "animFadeIn" - исчезание/появление</td>
+				</tr>
+				<tr>
+					<td>random</td>
+					<td>Boolean</td>
+					<td>true</td>
+					<td>Случайный порядок переворачивания карточек</td>
+				</tr>
+			</table>
+			<br>
+			<h2>Методы</h2>
+			<table cellspacing="0" cellpadding="0">
+				<tr>
+					<th>Имя</th>
+					<th>Аргументы</th>
+					<th>Описание</th>
+				</tr>
+				<tr>
+					<td>start</td>
+					<td>-</td>
+					<td>Запустить плагин</td>
+				</tr>
+				<tr>
+					<td>stop</td>
+					<td>-</td>
+					<td>Остановить плагин</td>
+				</tr>
+				<tr>
+					<td>getOption</td>
+					<td>option</td>
+					<td>Получить значение параметра</td>
+				</tr>
+				<tr>
+					<td>setOption</td>
+					<td>option, value</td>
+					<td>Установить значение параметра</td>
+				</tr>
+				<tr>
+					<td>destroy</td>
+					<td>-</td>
+					<td>Уничтожить плагин</td>
+				</tr>
+			</table>
+			<br>
+			<br>
+			<h2>С него начать?</h2>
+			<h3>Подключить css и js</h3>
+			<div class="b-code">
+
+<code>&lt;link rel="stylesheet" type="text/css" href="jquery.flipper.css"/&gt;
+&lt;script type="text/javascript" src="jquery.flipper.js"&gt;&lt;/script&gt;</code>
+
+			</div>
+			<h3>Настроить Html-разметку</h3>
+			<div class="b-code">
+
+<code>&lt;div&gt; class="container" <span>&lt;!--контейнер флиппера--&gt;</span>
+	&lt;div&gt; <span>&lt;!--контейнер карточки--&gt;</span>
+		&lt;div>&lt;/div&gt; <span>&lt;!--передняя сторона карточки--&gt;</span>
+		&lt;div>&lt;/div&gt; <span>&lt;!--задняя сторона карточки--&gt;</span>
+	&lt;/div&gt;
+	...
+&lt;/div&gt;</code>
+
+			</div>
+			<h3>Инициализировать плагин</h3>
+			<div class="b-code">
+
+<code>var plugin = $(".container").flipper({
+	<span>// options</span>
+});
+plugin.flipper("setOption", "random", false); <span>// Пример вызова метода</span></code>
+
+			</div>
+		</div>
+		<h2>Пример 1 (дефолтные параметры)</h2>
+		<div class="b-code"><code>var flipper1 = $(".b-card-list").flipper();</code></div>
+		<div class="b-card-list clearfix">
+			<div class="b-card-item">
+				<div class="b-img" style="background-image: url('i/1.jpg')"></div>
+				<div class="b-img" style="background-image: url('i/2.jpg')"></div>
+			</div>
+			<div class="b-card-item">
+				<div class="b-img" style="background-image: url('i/1.jpg')"></div>
+				<div class="b-img" style="background-image: url('i/2.jpg')"></div>
+			</div>
+			<div class="b-card-item">
+				<div class="b-img" style="background-image: url('i/1.jpg')"></div>
+				<div class="b-img" style="background-image: url('i/2.jpg')"></div>
+			</div>
+			<div class="b-card-item">
+				<div class="b-img" style="background-image: url('i/1.jpg')"></div>
+				<div class="b-img" style="background-image: url('i/2.jpg')"></div>
+			</div>
+			<div class="b-card-item">
+				<div class="b-img" style="background-image: url('i/1.jpg')"></div>
+				<div class="b-img" style="background-image: url('i/2.jpg')"></div>
+			</div>
+			<div class="b-card-item">
+				<div class="b-img" style="background-image: url('i/1.jpg')"></div>
+				<div class="b-img" style="background-image: url('i/2.jpg')"></div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<h2>Пример 2</h2>
+<div class="b-code"><code>var flipper2 = $(".b-card-list-2").flipper({
+    countCardsInRow: 4,
+    delayFlip: 1000,
+    animateSpeed: 400,
+    animateType: "animFadeIn",
+    random: false,
+});</code></div>
+		<div class="b-card-list-2 clearfix">
+			<div class="b-card-item">
+				<div class="b-img" style="background-image: url('i/1.jpg')"></div>
+				<div class="b-img" style="background-image: url('i/2.jpg')"></div>
+			</div>
+			<div class="b-card-item">
+				<div class="b-img" style="background-image: url('i/1.jpg')"></div>
+				<div class="b-img" style="background-image: url('i/2.jpg')"></div>
+			</div>
+			<div class="b-card-item">
+				<div class="b-img" style="background-image: url('i/1.jpg')"></div>
+				<div class="b-img" style="background-image: url('i/2.jpg')"></div>
+			</div>
+			<div class="b-card-item">
+				<div class="b-img" style="background-image: url('i/1.jpg')"></div>
+				<div class="b-img" style="background-image: url('i/2.jpg')"></div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.flipper.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
